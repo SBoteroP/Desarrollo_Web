@@ -69,5 +69,21 @@
         <button type="submit">Enviar</button>
       </form>
     </section>
+    <!-- JavaScript -->
+    <script>
+      const contactForm = document.getElementById("contactForm");
+      contactForm.addEventListener("submit", (event) => {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+
+        if (name && email) {
+          alert("Formulario enviado exitosamente");
+        } else {
+          alert("Por favor, complete ambos campos.");
+        }
+
+        event.preventDefault(); // Prevent actual form submission
+      });
+    </script>
   </body>
 </html>
