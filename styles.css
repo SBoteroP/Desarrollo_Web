@@ -64,7 +64,16 @@ nav {
   color: white;
   font-weight: bolder;
 }
+.content ul {
+  list-style-type: disc;
+  margin-left: 200px;
+  text-align: left;
+}
 
+.content li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
 .banner {
   display: flex;
   justify-content: center;
@@ -79,7 +88,34 @@ nav {
   align-items: center;
   background-color: white;
 }
+.banner-image-2 {
+  display: flex;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.banner-image-2 p {
+  font-size: 1.2rem;
+}
 
+.image-text-2 {
+  padding: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: rgb(77, 77, 77);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  padding: 20px 40px;
+  border: 2px solid rgb(26, 26, 26);
+  border-radius: 20px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
 
 .image-text {
   padding: 40px;
@@ -221,7 +257,8 @@ nav {
   margin-right: 20px;
 }
 
-.team-member, .member-info {
+.team-member,
+.member-info {
   flex: 1;
 }
 
