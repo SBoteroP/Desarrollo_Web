@@ -3,26 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../shark.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="../shark.ico" type="image/x-icon">
+    <link rel="icon" href="../img/shark.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/shark.ico" type="image/x-icon">
     <title>Tiburones Voladores</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
     <!-- Encabezado -->
     <header>
-      <nav center>
-        <a href="main/index.html"
-          ><img src="../image-removebg-preview (2).png" class="logo"
-        /></a>
-        <a href="main/presentacion.html" class="link">Página de Presentación</a>
-        <a href="main/requerimientos.html" class="link">Requerimientos</a>
-        <a href="main/desarrollo.html" class="link">Para Desarrollo</a>
-        <a href="main/despliegue.html" class="link">Despliegue</a>
+      <nav>
+          <a href="main/index.html">
+              <img src="../img/image-removebg-preview (2).png" class="logo" />
+          </a>
+          <a href="main/presentacion.html" class="link">Página de Presentación</a>
+          <div class="link">
+            Requerimientos
+            <div class="dropdown">
+                <a href="main/requerimientos.html">Funcionales</a>
+                <a href="main/requerimientos.html">No Funcionales</a>
+            </div>
+        </div>
+          <div class="link">
+            Para desarrollo
+            <div class="dropdown">
+                <a href="main/desarrollo.html">Descripciones de endpoints</a>
+            </div>
+        </div>
+          <div class="link">
+            Despliegue
+            <div class="dropdown">
+                <a href="main/despliegue.html">Versiones</a>
+            </div>
+        </div>
       </nav>
-    </header>
+  </header>
   </body>
+  <script src="../js/desplegable.js""></script>
   <section class="content">
     <h1>Arquitectura del Proyecto</h1>
+    <h3>Modelo conceptual</h3>
+    <img src="../img/modeloConceptual.png" class="img-grande" />
+    <h3>Modelo contenedores</h3>
+    <img src="../img/modeloContenedores.png" class="img-grande" />
+    <h3>Modelo componente</h3>
+    <img src="../img/modeloComponente.png" class="img-grande" />
   </section>
 </html>

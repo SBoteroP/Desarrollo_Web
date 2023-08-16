@@ -1,74 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../../shark.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="../../shark.ico" type="image/x-icon">
+    <link rel="icon" href="../../img/shark.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../img/shark.ico" type="image/x-icon">
     <title>Tiburones Voladores</title>
     <link rel="stylesheet" href="../../css/styles.css" />
-  </head>
-  <body>
+</head>
+<body>
     <!-- Encabezado -->
     <header>
-      <nav>
-        <a href="index.html">
-          <img src="../../image-removebg-preview (2).png" class="logo" />
-        </a>
-        <a href="presentacion.html" class="link">Página de Presentación</a>
-        <a href="requerimientos.html" class="link">Requerimientos</a>
-        <a href="desarrollo.html" class="link">Para Desarrollo</a>
-        <a href="despliegue.html" class="link">Despliegue</a>
-      </nav>
+        <nav>
+            <a href="index.html">
+                <img src="../../img/image-removebg-preview (2).png" class="logo" />
+            </a>
+            <a href="presentacion.html" class="link">Página de Presentación</a>
+            <div class="link">
+              Requerimientos
+              <div class="dropdown">
+                  <a href="requerimientos.html">Funcionales</a>
+                  <a href="requerimientos.html">No Funcionales</a>
+              </div>
+          </div>
+            <div class="link">
+              Para desarrollo
+              <div class="dropdown">
+                  <a href="desarrollo.html">Descripciones de endpoints</a>
+              </div>
+          </div>
+            <div class="link">
+              Despliegue
+              <div class="dropdown">
+                  <a href="despliegue.html">Versiones</a>
+              </div>
+          </div>
+        </nav>
     </header>
 
     <!-- Contenido -->
     <section class="content">
-      <h1>Descripción del proyecto</h1>
-      <h2>APLICACIÓN PARA MANEJO DE MÚSICA</h2>
-      <p>Ingresar aquí el texto que describe nuestro proyecto</p>
+        <h1>Descripción del proyecto</h1>
+        <h2>APLICACIÓN PARA MANEJO DE MÚSICA</h2>
+      <!-- <p>Ingresar aquí el texto que describe nuestro proyecto</p> -->  
     </section>
 
     <!-- Banner Principal -->
     <section class="banner">
-      <a href="../listaIntegrantes.html" class="big-link">Listado de Integrantes</a>
+        <a href="../listaIntegrantes.html" class="big-link">Listado de Integrantes</a>
     </section>
 
     <!-- Sección de Arquitectura del Proyecto -->
     <section class="banner">
-      <a href="../arquitectura.html" class="big-link">Arquitectura del Proyecto</a>
+        <a href="../arquitectura.html" class="big-link">Arquitectura del Proyecto</a>
     </section>
 
     <!-- Sección de Pruebas del Proyecto -->
     <section class="banner">
-      <a href="../pruebas.html" class="big-link">Pruebas</a>
+        <a href="../pruebas.html" class="big-link">Pruebas</a>
     </section>
 
     <!-- Formulario de Contacto -->
     <section class="contact">
-      <h2>CONTÁCTENOS</h2>
-      <form method="post" id="contact-form" novalidate>
-        <label for="name">Nombre:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Nombre & Apellido"
-          required
-          style="display: inline-block"
-        />
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="ejemplo@mail.com"
-          required
-          style="display: inline-block"
-        />
-        <button type="submit">Enviar</button>
-      </form>
+        <h2>CONTÁCTENOS</h2>
+        <form method="post" id="contact-form" novalidate>
+            <label for="name">Nombre:</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Nombre & Apellido"
+                required
+                style="display: inline-block"
+            />
+            <label for="email">Email:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ejemplo@mail.com"
+                required
+                style="display: inline-block"
+            />
+            <button type="submit">Enviar</button>
+        </form>
     </section>
     <script src="../../js/verificaciones.js"></script>
-  </body>
+    <script src="../../js/desplegable.js"></script>
+</body>
 </html>
