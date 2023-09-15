@@ -16,18 +16,18 @@ public class WikiController {
 
     @GetMapping
     public String load() {
-        // Handle GET requests to display the main/index page
+        // Usa GET para traer el html de la página inicial
         return "main/index";
     }
 
     @PostMapping()
     public String submitContactForm(@RequestParam String name, @RequestParam String email) {
-        // Handle POST requests for form submission
+        // Utiliza el POST de Sping para hacer que la página se contacte con JPA (mySQL)
         Contacto entry = new Contacto();
         entry.setNombre(name);
         entry.setEmail(email);
 
-        // Use the repository to save the Contacto entity
+        // Llama al repositorio para usar el método .save
         repoContacto.save(entry);
         return "main/index";
     }
