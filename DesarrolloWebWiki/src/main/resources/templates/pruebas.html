@@ -13,7 +13,7 @@
 <header>
     <nav>
         <a href="../main/index">
-            <img src="../../static/image-removebg-preview (2).png" class="logo" alt=""/>
+            <img src="../static/image-removebg-preview (2).png" class="logo" alt=""/>
         </a>
         <a href="/main/presentacion" class="link">Página de Presentación</a>
         <a href="/main/requerimientos" class="link">Requerimientos</a>
@@ -21,8 +21,412 @@
         <a href="/main/despliegue" class="link">Despliegue</a>
     </nav>
 </header>
-</body>
+
 <section class="content">
     <h1>Pruebas del Proyecto</h1>
+    <table>
+        <tr>
+            <th>Identificador</th>
+            <th>Título</th>
+            <th>Descripción</th>
+            <th>Diseñada por</th>
+            <th>Dependencias de la prueba</th>
+            <th>Ejecutada por</th>
+            <th>Resultados Esperados</th>
+            <th>Resultados Reales</th>
+            <th>Cumplió</th>
+        </tr>
+        <!-- Add rows for each test case -->
+        <tr>
+            <td>CreateCancion</td>
+            <td>Prueba de creación de una canción</td>
+            <td>Este caso de prueba se encarga de crear una nueva canción...</td>
+            <td>Andres</td>
+            <td>Clase de Cancion, Interfaz de CancionRepository, etiquetas como “Autowired”, “SpringBootTest”</td>
+            <td>Juan</td>
+            <td>Se espera que la canción se cree con éxito.</td>
+            <td>Se creó, guardó y recupero la canción “Canción”</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Add rows for other test cases -->
+        <tr>
+            <td>UpdateCancion</td>
+            <td>Prueba de actualización de una canción</td>
+            <td>Este caso de prueba crea una nueva canción, la guarda en el repositorio...</td>
+            <td>Julian</td>
+            <td>Clase de Cancion, Interfaz de CancionRepository, etiquetas como “Autowired”, “SpringBootTest”</td>
+            <td>Andres</td>
+            <td>Se espera que la canción se actualice con éxito.</td>
+            <td>Se leen los datos guardados para ver la cantidad de canciones guardadas</td>
+            <td>Cumplió</td>
+        </tr>
+        <tr>
+            <td>DeleteCancion</td>
+            <td>Prueba de eliminación de una canción</td>
+            <td>Este caso de prueba crea una nueva canción, la guarda en el repositorio...</td>
+            <td>Andres</td>
+            <td>Clase de Cancion, Interfaz de CancionRepository, etiquetas como “Autowired”, “SpringBootTest”</td>
+            <td></td>
+            <td>Se espera que la canción se elimine con éxito del repositorio.</td>
+            <td>Se crea la canción “Delcancion”, se guarda y se elimina</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 5 -->
+        <tr>
+            <td>createCancionGenero</td>
+            <td>Prueba de creación de una canción con género asociado.</td>
+            <td>Este caso de prueba crea un género, luego crea una nueva canción asociada a ese género...</td>
+            <td>Santiago</td>
+            <td>Clase de Cancion, Interfaz de CancionRepository, etiquetas como “Autowired”, “SpringBootTest”</td>
+            <td></td>
+            <td>Se espera que tanto la canción como el género se creen con éxito.</td>
+            <td>Se creo, guardo y recupero la canción “PruebaCancion” con género “prueba”</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 6 -->
+        <tr>
+            <td>CreateGeneroTest</td>
+            <td>Prueba de creación de un género.</td>
+            <td>Este caso de prueba crea un nuevo género, lo guarda en el repositorio de géneros y...</td>
+            <td>Julian</td>
+            <td>Clase de Genero, Interfaz de GeneroRepository, etiquetas como “Autowired”, “SpringBootTest”</td>
+            <td>Juan</td>
+            <td>Se espera que el género se cree con éxito.</td>
+            <td>Se creo, guardo y recupero el género “Pruebagenero”</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 7 -->
+        <tr>
+            <td>ReadGeneroTest</td>
+            <td>Prueba de lectura de géneros.</td>
+            <td>Este caso de prueba busca todos los géneros en el repositorio de géneros y...</td>
+            <td>Juan</td>
+            <td>Clase de Genero, Interfaz de GeneroRepository, etiquetas como “Autowired”, “SpringBootTest”</td>
+            <td>Andres</td>
+            <td>Se espera que al menos un género esté presente en el repositorio.</td>
+            <td>Se leen los datos guardados para ver la cantidad de generos guardados</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 8 -->
+        <tr>
+            <td>UpdateGeneroTest</td>
+            <td>Prueba de actualización de géneros.</td>
+            <td>Este caso de prueba busca todos los géneros en el repositorio, actualiza el tipo...</td>
+            <td>Santiago</td>
+            <td>Clase de Genero, Interfaz de GeneroRepository, etiquetas como “Autowired”, “SpringBootTest”</td>
+            <td>Andres</td>
+            <td>Se espera que todos los géneros se actualicen con éxito.</td>
+            <td>Se espera que todos los géneros tengan el tipo "newGenero" después de la actualización.</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 9 -->
+        <tr>
+            <td>DeleteGeneroTest</td>
+            <td>Prueba de eliminación de géneros.</td>
+            <td>Este caso de prueba crea un nuevo género, lo guarda en el repositorio, lo elimina del...</td>
+            <td>Andres</td>
+            <td>Clase de Genero, Interfaz de GeneroRepository, etiquetas como “Autowired”, “SpringBootTest”</td>
+            <td>Julian</td>
+            <td>Se espera que el género se elimine con éxito del repositorio.</td>
+            <td>Se crea el género “music”, se guarda y se elimina</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 10 -->
+        <tr>
+            <td>CancionesAGenero</td>
+            <td>Prueba de asociación de canciones a un género.</td>
+            <td>Este caso de prueba crea un género, luego crea dos canciones asociadas a ese género...</td>
+            <td>Juan</td>
+            <td>Clase de Genero, Interfaz de GeneroRepository, etiquetas como “Autowired”, “SpringBootTest”</td>
+            <td>Santiago</td>
+            <td>Se espera que el género y las canciones se creen con éxito.</td>
+            <td>Se crea y guarda el género “Rock” y se crean y guardan las canciones “Cancion1” y ”Cancion2”</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 11 -->
+        <tr>
+            <td>CreateUsuario</td>
+            <td>Prueba de creación de un usuario.</td>
+            <td>Este caso de prueba crea un nuevo usuario con ciertos atributos, lo guarda en el repositorio de
+                usuarios...
+            </td>
+            <td>Andres</td>
+            <td>Clase de Usuario, Interfaz de UsuarioRepository, etiquetas como “Autowired”, “SpringBootTest”</td>
+            <td>Juan</td>
+            <td>Se espera que el usuario se cree con éxito.</td>
+            <td>Se creo, guardo y recupero el usuario “Andres”</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 12 -->
+        <tr>
+            <td>ReadUsuario</td>
+            <td>Prueba de lectura de un usuario.</td>
+            <td>Este caso de prueba crea un nuevo usuario, lo guarda en el repositorio de usuarios, lo busca por su
+                ID...
+            </td>
+            <td>Santiago</td>
+            <td>Clase de Usuario, Interfaz de UsuarioRepository, etiquetas como “Autowired”, “SpringBootTest”</td>
+            <td>Julian</td>
+            <td>Se espera que el usuario se lea correctamente.</td>
+            <td>Se leen los datos guardados para ver la cantidad de usuarios guardados</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 13 -->
+        <tr>
+            <td>UpdateUsuario</td>
+            <td>Prueba de actualización de un usuario.</td>
+            <td>Este caso de prueba crea un nuevo usuario con un tipo inicial, lo guarda en el repositorio de
+                usuarios...
+            </td>
+            <td>Julian</td>
+            <td>Clase de Usuario, Interfaz de UsuarioRepository, etiquetas como “Autowired”, “SpringBootTest”</td>
+            <td>Andres</td>
+            <td>Se espera que el usuario se actualice con éxito.</td>
+            <td>Se actializa el nombre “Andres” a “Andres R”</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 14 -->
+        <tr>
+            <td>DeleteUsuario</td>
+            <td>Prueba de eliminación de un usuario.</td>
+            <td>Este caso de prueba crea un nuevo usuario, lo guarda en el repositorio de usuarios, la elimina del
+                repositorio...
+            </td>
+            <td>Andres</td>
+            <td>Clase de Usuario, Interfaz de UsuarioRepository, etiquetas como “Autowired”, “SpringBootTest”</td>
+            <td>Julian</td>
+            <td>Se espera que el usuario se elimine con éxito del repositorio.</td>
+            <td>Se crea el usuario “pruebaEliminar”, se guarda y se elimina</td>
+            <td>Cumplió</td>
+        </tr>
+
+        <!-- Test Case 15 -->
+        <tr>
+            <td>testNombreNoPuedeSerNulo</td>
+            <td>Prueba de restricción de nombre no nulo.</td>
+            <td>Este caso de prueba crea un nuevo usuario con un nombre nulo, intenta guardar el usuario y verifica que
+                se lance una excepción de violación de restricción (ConstraintViolationException) debido a que el nombre
+                no puede ser nulo.
+            </td>
+            <td>Andres</td>
+            <td>Clase de Usuario, Interfaz de UsuarioRepository, etiquetas como “Autowired”, “SpringBootTest”</td>
+            <td>Santiago</td>
+            <td>Se espera que se lance una excepción de ConstraintViolationException debido a que el nombre es nulo.
+            </td>
+            <td>Se usa el assetthrows para obtener la excepción y no permitir nulos</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 16 -->
+        <tr>
+            <td>CreateUsuarioAdmin</td>
+            <td>Prueba de creación de un Usuario Admin</td>
+            <td>Este caso de prueba se encarga de crear un nuevo usuario administrador, guardarlo en el repositorio de
+                “usuarios admin” y luego verificar si se creó correctamente y tiene los valores esperados.
+            </td>
+            <td>Andres Rueda</td>
+            <td>Clase de UsuarioAdmin, Interfaz de UsuarioAdminRepository, etiquetas como “Autowired”,
+                “SpringBootTest”
+            </td>
+            <td>Juan, Andres</td>
+            <td>Se espera que el usuario se cree con éxito. Se espera que el usuario tenga se haya creado como tipo
+                admin.
+            </td>
+            <td>Usuario con nombre “Nombre” fue creado, guardado y recuperado</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 17 -->
+        <tr>
+            <td>ReadUsuarioAdmin</td>
+            <td>Prueba de lectura de un Usuario Admin</td>
+            <td>Este caso de prueba se encarga de acceder a un usuario administrador para verificar si está guardado en
+                el repositorio de “usuarios admin”.
+            </td>
+            <td>Julian</td>
+            <td>Clase de UsuarioAdmin, Interfaz de UsuarioAdminRepository, etiquetas como “Autowired”,
+                “SpringBootTest”
+            </td>
+            <td>Andres</td>
+            <td>Se espera que el usuario admin se pueda recuperar de la base de datos correctamente. Se espera que el
+                usuario tenga se haya creado como tipo admin.
+            </td>
+            <td>Se leen los datos guardados para ver la cantidad de usuarios guardados</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 18 -->
+        <tr>
+            <td>UpdateUsuarioAdmin</td>
+            <td>Prueba que actualiza un Usuario Admin</td>
+            <td>Este caso de prueba se encarga de actualizar un usuario administrador para verificar si el usuario es
+                “usuarios admin”.
+            </td>
+            <td>Juan</td>
+            <td>Clase de UsuarioAdmin, Interfaz de UsuarioAdminRepository, etiquetas como “Autowired”,
+                “SpringBootTest”
+            </td>
+            <td>Santiago</td>
+            <td>Se espera que el usuario admin se pueda recuperar de la base de datos correctamente. Se espera que el
+                usuario tenga se haya creado como tipo admin.
+            </td>
+            <td>Se actualiza el usuario de “Andres”</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 19 -->
+        <tr>
+            <td>DeleteUsuarioAdmin</td>
+            <td>Prueba de eliminación de usuarios administradores.</td>
+            <td>Este caso de prueba crea un nuevo UsuarioAdmin, lo guarda en el repositorio, lo elimina del repositorio
+                y luego verifica que el usuario administrador haya sido eliminado correctamente.
+            </td>
+            <td>Andres</td>
+            <td>Clase de UsuarioAdmin, Interfaz de UsuarioAdminRepository, etiquetas como “Autowired”,
+                “SpringBootTest”
+            </td>
+            <td>Julian</td>
+            <td>Se espera que el usuario administrador se elimine con éxito del repositorio y no sea encontrado después
+                de la eliminación.
+            </td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 20 -->
+        <tr>
+            <td>CreateUsuarioAdminConDatosInvalidos</td>
+            <td>Prueba de creación de UsuarioAdmin con datos inválidos.</td>
+            <td>Este caso de prueba intenta crear un UsuarioAdmin sin proporcionar datos válidos, como nombre o correo.
+                Se utiliza assertThrows para verificar que se genera una excepción de restricción de integridad de
+                datos.
+            </td>
+            <td>Santiago</td>
+            <td>Clase de UsuarioAdmin, Interfaz de UsuarioAdminRepository, etiquetas como “Autowired”,
+                “SpringBootTest”
+            </td>
+            <td>Julian</td>
+            <td>Se espera que la creación del UsuarioAdmin con datos inválidos genere una excepción de restricción de
+                integridad de datos (ConstraintViolationException).
+            </td>
+            <td>Se crea el usuario admin “Nombre”, se guarda y se elimina</td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 21 -->
+        <tr>
+            <td>CreateUsuarioAdminConDatosInvalidos</td>
+            <td>Prueba de creación de un Usuario Votante.</td>
+            <td>Este caso de prueba intenta crear un UsuarioAdmin sin proporcionar datos válidos, como nombre o correo.
+                Se utiliza assertThrows para verificar que se genera una excepción de restricción de integridad de
+                datos.
+            </td>
+            <td>Andres</td>
+            <td>Clase de UsuarioVotante, Interfaz de UsuarioVotanteRepository, etiquetas como “Autowired”,
+                “SpringBootTest”
+            </td>
+            <td>Santiago</td>
+            <td>Se espera que la creación del UsuarioAdmin con datos inválidos genere una excepción de restricción de
+                integridad de datos (ConstraintViolationException).
+            </td>
+            <td>Se crea el usuario y se usa el assertThrows para generar la excepcion de restriccion de la integridad de
+                los datos
+            </td>
+            <td>Cumplió</td>
+        </tr>
+        <!-- Test Case 22 -->
+        <tr>
+            <td>CreateUsuarioVotante</td>
+            <td>Prueba de creación de un Usuario Votante.</td>
+            <td>Este caso de prueba crea una canción, luego crea un Usuario Votante asociado a esa canción, lo guarda en
+                el repositorio de Usuarios Votantes y verifica si el Usuario Votante se creó correctamente y tiene los
+                valores esperados.
+            </td>
+            <td>Juan</td>
+            <td>Clase de UsuarioVotante, Interfaz de UsuarioVotanteRepository, CancionRepository, etiquetas como
+                “Autowired”, “SpringBootTest”
+            </td>
+            <td>Andres</td>
+            <td>Se espera que la canción y el Usuario Votante se creen con éxito. Se espera que el Usuario Votante tenga
+                el nombre "Nombre", la activación sea verdadera y esté asociado a la canción creada.
+            </td>
+            <td>Se crea el usuario y se usa el assertThrows para generar la excepcion de restriccion de la integridad de
+                los datos
+            </td>
+            <td>Cumplió</td>
+        </tr>
+
+        <!-- Test Case 23 -->
+        <tr>
+            <td>ReadUsuarioAdmin</td>
+            <td>Prueba de lectura de Usuarios Votantes.</td>
+            <td>Este caso de prueba busca todos los Usuarios Votantes en el repositorio de Usuarios Votantes y verifica
+                que haya al menos un Usuario Votante en el repositorio.
+            </td>
+            <td>Andres</td>
+            <td>Clase de UsuarioVotante, Interfaz de UsuarioVotanteRepository, CancionRepository, etiquetas como
+                “Autowired”, “SpringBootTest”
+            </td>
+            <td>Santiago</td>
+            <td>Se espera que al menos un Usuario Votante esté presente en el repositorio</td>
+            <td>Se leen los datos guardados para ver la cantidad de usuarios guardados  .</td>
+            <td>Cumplió</td>
+        </tr>
+
+        <!-- Test Case 24 -->
+        <tr>
+            <td>UpdateUsuarioAdmin</td>
+            <td>Prueba de actualización de Usuarios Votantes.</td>
+            <td>Este caso de prueba busca todos los Usuarios Votantes en el repositorio, actualiza el nombre de Usuario
+                Votante que tenga el nombre "Nombre" y luego verifica que la actualización se haya realizado
+                correctamente en el repositorio.
+            </td>
+            <td>Andres</td>
+            <td>Clase de UsuarioVotante, Interfaz de UsuarioVotanteRepository, CancionRepository, etiquetas como
+                “Autowired”, “SpringBootTest”
+            </td>
+            <td>Julian</td>
+            <td>Se espera que el Usuario Votante con nombre "Nombre" se actualice con éxito y tenga el nombre "Andres"
+                después de la actualización.
+            </td>
+            <td>Se actualizo los datos del usuario votante “Nombre” a “Andres”</td>
+            <td>Cumplió</td>
+        </tr>
+
+        <!-- Test Case 25 -->
+        <tr>
+            <td>DeleteUsuarioVotante</td>
+            <td>Prueba de eliminación de Usuarios Votantes.</td>
+            <td>Este caso de prueba crea una canción y un Usuario Votante asociado a esa canción, los guarda en los
+                respectivos repositorios, luego elimina al Usuario Votante del repositorio y verifica que el Usuario
+                Votante haya sido eliminado correctamente.
+            </td>
+            <td>Santiago</td>
+            <td>Clase de UsuarioVotante, Interfaz de UsuarioVotanteRepository, CancionRepository, etiquetas como
+                “Autowired”, “SpringBootTest”
+            </td>
+            <td>Juan</td>
+            <td>Se espera que el Usuario Votante se elimine con éxito del repositorio y ya no esté presente.</td>
+            <td>Se crea la canción “Cancion1”, se guarda y se elimina</td>
+            <td>Cumplió</td>
+        </tr>
+
+        <!-- Test Case 26 -->
+        <tr>
+            <td>CreateUsuarioVotanteConDatosInvalidos</td>
+            <td>Prueba de creación de Usuario Votante con datos inválidos.</td>
+            <td>Este caso de prueba intenta crear un Usuario Votante sin proporcionar datos obligatorios, lo que debería
+                generar una excepción ConstraintViolationException. Se espera que la excepción sea lanzada durante la
+                creación.
+            </td>
+            <td>Julian</td>
+            <td>Clase de UsuarioVotante, Interfaz de UsuarioVotanteRepository, CancionRepository, etiquetas como
+                “Autowired”, “SpringBootTest”
+            </td>
+            <td>Juan</td>
+            <td>Se espera que la creación del Usuario Votante con datos inválidos genere una excepción de restricción de
+                integridad de datos (ConstraintViolationException).
+            </td>
+            <td>Se crea el usuario y se usa el assertThrows para generar la excepcion de restriccion de la integridad de
+                los datos
+            </td>
+            <td>Cumplió</td>
+        </tr>
+
+    </table>
 </section>
+</body>
 </html>
