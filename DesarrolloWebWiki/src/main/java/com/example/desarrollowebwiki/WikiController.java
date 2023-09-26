@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/main/index")
 public class WikiController {
 
     @Autowired
@@ -22,12 +22,12 @@ public class WikiController {
 
     @PostMapping()
     public String submitContactForm(@RequestParam String name, @RequestParam String email) {
-        // Utiliza el POST de Sping para hacer que la página se contacte con JPA (mySQL)
+        // Utiliza el POST de Spring para hacer que la página se contacte con JPA (mySQL)
         Contacto entry = new Contacto();
         entry.setNombre(name);
         entry.setEmail(email);
 
-        // Llama al repositorio para usar el método .save
+        // Llama al repositorio para usar el método (.save)
         repoContacto.save(entry);
         return "main/index";
     }

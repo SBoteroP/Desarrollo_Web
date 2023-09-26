@@ -6,20 +6,20 @@
     <link rel="icon" href="../../shark.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../../shark.ico" type="image/x-icon">
     <title>Tiburones Voladores</title>
-      <link rel="stylesheet" href="../../static/css/styles.css" />
+      <link rel="stylesheet" th:href="@{/css/styles.css}"/>
   </head>
   <body>
     <!-- Encabezado -->
     <header>
-      <nav center>
-          <a href="../main/index.html">
-              <img src="../../static/image-removebg-preview (2).png" class="logo"/>
-          </a>
-        <a href="../main/presentacion.html" class="link">Página de Presentación</a>
-        <a href="../main/requerimientos.html" class="link">Requerimientos</a>
-        <a href="../main/desarrollo.html" class="link">Para Desarrollo</a>
-        <a href="../main/despliegue.html" class="link">Despliegue</a>
-      </nav>
+        <nav>
+            <a href="../main/index">
+                <img src="../../static/image-removebg-preview (2).png" class="logo" alt=""/>
+            </a>
+            <a href="/main/presentacion" class="link">Página de Presentación</a>
+            <a href="/main/requerimientos" class="link">Requerimientos</a>
+            <a href="/main/desarrollo" class="link">Para Desarrollo</a>
+            <a href="/main/despliegue" class="link">Despliegue</a>
+        </nav>
     </header>
     <section class="content">
       <div class="team-member">
